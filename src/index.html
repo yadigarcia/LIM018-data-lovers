@@ -4,11 +4,45 @@
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <h1> Hellooo</h1>
+    <script src="https://kit.fontawesome.com/f9eb7bc24d.js" crossorigin="anonymous"></script>
+
+   
   </head>
   <body>
-    hola
-    <div id="root"></div>
+    <header>
+      <nav class="navmenu">
+        <ul id="menu" class="menu">
+          <button id="inicio" class="inicio"> Inicio </button>
+          <button id="Pokedex" class="iniciopokedex"> Pokedex </button>
+          <button  class="inicioJugar"> Jugar </button>
+          <button  class="inicioAcercade"> Acerca de </button>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="pokedex_header">
+      <form>
+        <input type="text">
+        <button><img src="/images/pokebola01.png"></button>
+      </form>
+      
+    </div>
+
+    <nav class="navoption">
+      <div>
+        <i class="fa-solid fa-filter"> Filtrar</i>
+      </div>
+      <div>
+        <i class="fa-solid fa-arrow-up-a-z"> Ordenar A-Z </i>
+      </div>
+      <div>
+        <i class="fa-solid fa-arrow-up-z-a"> Ordenar Z-A</i>
+      </div>
+    </nav>
+    
+    <div id="containerPokemon" class="containerPokemon">
+
+    </div>
     <script src="main.js" type="module"></script>
   </body>
 </html>

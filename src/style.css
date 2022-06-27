@@ -1,0 +1,83 @@
+
+
+body {
+    background-color: black;
+}
+
+    
+.menu {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 1050px;
+    align-items: center;
+    margin: auto;
+    padding: 8px;
+    justify-content: center;
+  
+    
+}
+.menu button{
+    color: rgb(231, 229, 231);
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    
+}
+.menu .inicio {
+    background-color: rgb(218, 68, 106);
+    -webkit-text-stroke: 1px black
+
+}
+.menu .iniciopokedex {
+    background-color: rgb(53, 247, 53);
+}
+.menu .inicioJugar {
+    background-color: orange;
+}
+.menu .inicioAcercade{
+    background-color: blue;
+}
+.pokedex_header {
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+form{
+    display: flex;
+}
+img{
+    max-width: 100%;
+}
+.pokedex_header form input{
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin: 10px 5px;
+    width: 500px;
+}
+.pokedex_header form button{
+    width: 60px;
+    height: 60px;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.navoption {
+    color: rgb(207, 108, 9);
+    background-color: transparent;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-around;
+}
