@@ -1,9 +1,14 @@
 //import { example } from './data.js';
 
+import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
+import {ordenarAscendente} from "./data.js";
+import {ordenarDescendente} from "./data.js";
 
 let containerPokemon = document.getElementById("containerPokemon");
-let formBuscarPokemon = document.getElementById("buscarPokemon");
+//let formBuscarPokemon = document.getElementById("buscarPokemon");
+let ordenAscend = document.getElementById("ordenAscend");
+let ordenDescen = document.getElementById("ordenDescen");
 
 
 // creartePokemon(data.pokemon[0]);  (referencia)
@@ -21,10 +26,6 @@ let formBuscarPokemon = document.getElementById("buscarPokemon");
 for(let i=0; i< data.pokemon.length; i++ ){
    createPokeCard(data.pokemon[i]);
 }
-// function createPokemon(pokemon){
-//    console.log(pokemon.name)
-
-// }
 
 function createPokeCard (pokemon){
    let card=document.createElement("div");
@@ -57,6 +58,29 @@ function createPokeCard (pokemon){
    card.appendChild(type);
 
    containerPokemon.appendChild(card);
+}
+ordenAscend.addEventListener("click", e =>{
+   e.preventDefault();
    
   
-}
+   let ord = ordenarAscendente(data.pokemon); 
+
+   document.getElementById('containerPokemon').innerHTML = '';
+   
+   for(let i=0; i< ord.length; i++ ){
+      createPokeCard(ord[i]);
+   } 
+
+})
+ordenDescen.addEventListener("click", e =>{
+   e.preventDefault();
+
+   
+   let ordDes = ordenarDescendente(data.pokemon);
+   document.getElementById('containerPokemon').innerHTML = '';
+
+   for(let i=0; i< ordDes.length; i++ ){
+      createPokeCard(ordDes[i]);
+   } 
+
+})
