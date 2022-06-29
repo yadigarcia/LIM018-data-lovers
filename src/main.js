@@ -3,6 +3,8 @@
 import data from './data/pokemon/pokemon.js';
 
 let containerPokemon = document.getElementById("containerPokemon");
+let formBuscarPokemon = document.getElementById("buscarPokemon");
+
 
 // creartePokemon(data.pokemon[0]);  (referencia)
 // let pokemon =fetch("./data/pokemon/pokemon.json")
@@ -38,16 +40,23 @@ function createPokeCard (pokemon){
    imgContent.appendChild(imgPokemon);
 
    let number = document.createElement("p");
-   number.textContent = pokemon.num;
+   number.classList.add("numberPokemon");
+   number.textContent = "#" + pokemon.num;
 
    let name = document.createElement("p");
    name.classList.add("namePokemon");
    name.textContent = pokemon.name
+   
+   let type = document.createElement("p");
+   type.classList.add("typePokemon");
+   type.textContent = pokemon.type;
 
    card.appendChild(imgContent);
    card.appendChild(number);
    card.appendChild(name);
+   card.appendChild(type);
 
    containerPokemon.appendChild(card);
    
+  
 }
