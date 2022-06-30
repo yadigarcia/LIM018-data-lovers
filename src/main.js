@@ -6,7 +6,7 @@ import {ordenarAscendente} from "./data.js";
 import {ordenarDescendente} from "./data.js";
 
 let containerPokemon = document.getElementById("containerPokemon");
-//let formBuscarPokemon = document.getElementById("buscarPokemon");
+let btnBuscar = document.getElementById("btnBuscar");
 let ordenAscend = document.getElementById("ordenAscend");
 let ordenDescen = document.getElementById("ordenDescen");
 
@@ -84,3 +84,23 @@ ordenDescen.addEventListener("click", e =>{
    } 
 
 })
+btnBuscar.addEventListener("click", e => {
+   e.preventDefault();
+   let pokemonBuscar = document.getElementById("pokemonBuscar").value.toLowerCase();
+   document.getElementById('containerPokemon').innerHTML = '';
+   
+   let pokemonBuscado = data.pokemon.filter(x => x.name === pokemonBuscar || x.num === pokemonBuscar);
+  
+
+   for(let i=0; i< pokemonBuscado.length; i++ ){
+      createPokeCard(pokemonBuscado[i]);
+   } 
+   
+ 
+   
+
+
+
+   
+})
+
