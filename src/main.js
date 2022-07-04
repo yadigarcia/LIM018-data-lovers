@@ -9,20 +9,10 @@ let containerPokemon = document.getElementById("containerPokemon");
 //let formBuscarPokemon = document.getElementById("buscarPokemon");
 let ordenAscend = document.getElementById("ordenAscend");
 let ordenDescen = document.getElementById("ordenDescen");
+let searchPokemon = document.getElementById("searchPokemon")
+let btnSearch = document.getElementById("bntSearch")
 
-
-// creartePokemon(data.pokemon[0]);  (referencia)
-// let pokemon =fetch("./data/pokemon/pokemon.json")
-// .then(response => {
-//    return response.json();
-// })
-// .then(pokemon => console.log(pokemon.pokemon[0]));
- 
-// let showPokemon = async()=>{
-//  for(let i =1; i<=pokemonNumber; i++){
-//     await pokemon(i); 
-// }
-
+//mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
    createPokeCard(data.pokemon[i]);
 }
@@ -59,6 +49,8 @@ function createPokeCard (pokemon){
 
    containerPokemon.appendChild(card);
 }
+
+//Ordenar pokemon
 ordenAscend.addEventListener("click", e =>{
    e.preventDefault();
    
@@ -84,3 +76,33 @@ ordenDescen.addEventListener("click", e =>{
    } 
 
 })
+//Buscar pokemon
+
+let search = function(data) {
+   containerPokemon.innerHTML = " ";
+
+   let inputSearch = searchPokemon.value.toLowerCase();
+   for (let i = 0; i< data.length; i++) {
+
+      
+      
+   }
+}
+
+
+
+
+
+
+
+// creartePokemon(data.pokemon[0]);  (referencia)
+// let pokemon =fetch("./data/pokemon/pokemon.json")
+// .then(response => {
+//    return response.json();
+// })
+// .then(pokemon => console.log(pokemon.pokemon[0]));
+ 
+// let showPokemon = async()=>{
+//  for(let i =1; i<=pokemonNumber; i++){
+//     await pokemon(i); 
+// }
