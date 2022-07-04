@@ -87,14 +87,20 @@ ordenDescen.addEventListener("click", e =>{
 btnBuscar.addEventListener("click", e => {
    e.preventDefault();
    let pokemonBuscar = document.getElementById("pokemonBuscar").value.toLowerCase();
+   let pokemonBuscado = 0;
+
    document.getElementById('containerPokemon').innerHTML = '';
    
-   let pokemonBuscado = data.pokemon.filter(x => x.name === pokemonBuscar || x.num === pokemonBuscar);
+   
+   
   
+      
 
-   for(let i=0; i< pokemonBuscado.length; i++ ){
-      createPokeCard(pokemonBuscado[i]);
-   } 
+ 
+
+   // for(let i=0; i< pokemonBuscado.length; i++ ){
+   //    createPokeCard(pokemonBuscado[i]);
+    
    
  
    
@@ -102,5 +108,5 @@ btnBuscar.addEventListener("click", e => {
 
 
    
-})
+});
 

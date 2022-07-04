@@ -28,4 +28,10 @@ export const ordenarDescendente = (data) => {
  }
  return data.sort(sortDesPokemon);
 };
-
+// export function buscar(data, nombre) {
+//   return data.filter(function(element){
+//       return nombre === element.name || nombre === element.num;
+//    })
+     
+ 
+// }
