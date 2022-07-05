@@ -2,27 +2,16 @@
 
 import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import {ordenarAscendente} from "./data.js";
+import {ordenarAscendente, search} from "./data.js";
 import {ordenarDescendente} from "./data.js";
 
 let containerPokemon = document.getElementById("containerPokemon");
-let btnBuscar = document.getElementById("btnBuscar");
 let ordenAscend = document.getElementById("ordenAscend");
 let ordenDescen = document.getElementById("ordenDescen");
+let searchPokemon = document.getElementById("searchPokemon");
+let btnSearch = document.getElementById("btnSearch");
 
-
-// creartePokemon(data.pokemon[0]);  (referencia)
-// let pokemon =fetch("./data/pokemon/pokemon.json")
-// .then(response => {
-//    return response.json();
-// })
-// .then(pokemon => console.log(pokemon.pokemon[0]));
- 
-// let showPokemon = async()=>{
-//  for(let i =1; i<=pokemonNumber; i++){
-//     await pokemon(i); 
-// }
-
+//mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
    createPokeCard(data.pokemon[i]);
 }
@@ -59,13 +48,15 @@ function createPokeCard (pokemon){
 
    containerPokemon.appendChild(card);
 }
+
+//Ordenar pokemon
 ordenAscend.addEventListener("click", e =>{
    e.preventDefault();
    
   
    let ord = ordenarAscendente(data.pokemon); 
 
-   document.getElementById('containerPokemon').innerHTML = '';
+   containerPokemon.innerHTML = '';
    
    for(let i=0; i< ord.length; i++ ){
       createPokeCard(ord[i]);
@@ -77,36 +68,34 @@ ordenDescen.addEventListener("click", e =>{
 
    
    let ordDes = ordenarDescendente(data.pokemon);
-   document.getElementById('containerPokemon').innerHTML = '';
+   containerPokemon.innerHTML = '';
 
    for(let i=0; i< ordDes.length; i++ ){
       createPokeCard(ordDes[i]);
    } 
 
 })
-btnBuscar.addEventListener("click", e => {
+
+//Buscar pokemon
+btnSearch.addEventListener("click", e =>{
    e.preventDefault();
-   let pokemonBuscar = document.getElementById("pokemonBuscar").value.toLowerCase();
-   let pokemonBuscado = 0;
+   containerPokemon.innerHTML = '';
 
-   document.getElementById('containerPokemon').innerHTML = '';
    
    
-   
+   let pok= search(data.pokemon, searchPokemon.value);
+     
+    for(let i=0; i< pok.length; i++ ){
+       createPokeCard(pok[i]);
+    } 
   
-      
-
- 
-
-   // for(let i=0; i< pokemonBuscado.length; i++ ){
-   //    createPokeCard(pokemonBuscado[i]);
-    
-   
- 
    
 
-
-
-   
 });
+
+
+   
+
+
+
 
