@@ -2,15 +2,14 @@
 
 import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import {ordenarAscendente} from "./data.js";
+import {ordenarAscendente, search} from "./data.js";
 import {ordenarDescendente} from "./data.js";
 
 let containerPokemon = document.getElementById("containerPokemon");
-//let formBuscarPokemon = document.getElementById("buscarPokemon");
 let ordenAscend = document.getElementById("ordenAscend");
 let ordenDescen = document.getElementById("ordenDescen");
-let searchPokemon = document.getElementById("searchPokemon")
-let btnSearch = document.getElementById("bntSearch")
+let searchPokemon = document.getElementById("searchPokemon");
+let btnSearch = document.getElementById("btnSearch");
 
 //mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
@@ -57,7 +56,7 @@ ordenAscend.addEventListener("click", e =>{
   
    let ord = ordenarAscendente(data.pokemon); 
 
-   document.getElementById('containerPokemon').innerHTML = '';
+   containerPokemon.innerHTML = '';
    
    for(let i=0; i< ord.length; i++ ){
       createPokeCard(ord[i]);
@@ -69,40 +68,34 @@ ordenDescen.addEventListener("click", e =>{
 
    
    let ordDes = ordenarDescendente(data.pokemon);
-   document.getElementById('containerPokemon').innerHTML = '';
+   containerPokemon.innerHTML = '';
 
    for(let i=0; i< ordDes.length; i++ ){
       createPokeCard(ordDes[i]);
    } 
 
 })
+
 //Buscar pokemon
+btnSearch.addEventListener("click", e =>{
+   e.preventDefault();
+   containerPokemon.innerHTML = '';
 
-let search = function(data) {
-   containerPokemon.innerHTML = " ";
+   
+   
+   let pok= search(data.pokemon, searchPokemon.value);
+     
+    for(let i=0; i< pok.length; i++ ){
+       createPokeCard(pok[i]);
+    } 
+  
+   
 
-   let inputSearch = searchPokemon.value.toLowerCase();
-   for (let i = 0; i< data.length; i++) {
-
-      
-      
-   }
-}
-
-
-
+});
 
 
+   
 
 
-// creartePokemon(data.pokemon[0]);  (referencia)
-// let pokemon =fetch("./data/pokemon/pokemon.json")
-// .then(response => {
-//    return response.json();
-// })
-// .then(pokemon => console.log(pokemon.pokemon[0]));
- 
-// let showPokemon = async()=>{
-//  for(let i =1; i<=pokemonNumber; i++){
-//     await pokemon(i); 
-// }
+
+
