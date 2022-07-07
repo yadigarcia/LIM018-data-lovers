@@ -83,9 +83,9 @@ ordenAscend.addEventListener("click", e =>{
    } 
 
 })
+
 ordenDescen.addEventListener("click", e =>{
    e.preventDefault();
-
    
    let ordDes = ordenarDescendente(data.pokemon);
    containerPokemon.innerHTML = '';
@@ -101,16 +101,11 @@ btnSearch.addEventListener("click", e =>{
    e.preventDefault();
    containerPokemon.innerHTML = '';
 
-   
-   
    let pok= search(data.pokemon, searchPokemon.value);
      
     for(let i=0; i< pok.length; i++ ){
        createPokeCard(pok[i]);
-    } 
-  
-   
-
+   } 
 });
 
 
