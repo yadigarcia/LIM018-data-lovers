@@ -4,12 +4,11 @@ body {
     background-color: black;
 }
 
-    
+
 .menu {
     display: flex;
     flex-direction: row;
-    width: 90%;
-    max-width: 1050px;
+    width: 100%;
     align-items: center;
     margin: auto;
     padding: 8px;
@@ -25,6 +24,9 @@ body {
     cursor: pointer;
     border: none;
     text-transform: uppercase;
+    width: 100%;
+    
+    
     
 }
 .menu .inicio {

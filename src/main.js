@@ -1,6 +1,6 @@
 //import { example } from './data.js';
 
-import pokemon from './data/pokemon/pokemon.js';
+//import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 import {ordenarAscendente, search} from "./data.js";
 import {ordenarDescendente} from "./data.js";
@@ -10,6 +10,26 @@ let ordenAscend = document.getElementById("ordenAscend");
 let ordenDescen = document.getElementById("ordenDescen");
 let searchPokemon = document.getElementById("searchPokemon");
 let btnSearch = document.getElementById("btnSearch");
+// const typecolors = {
+//    electric: "#F1C40F",
+//    normal:
+//    fire: "#D32F2F",
+//    water: "#039BE5",
+//    ice:
+//    rock: "#9E9E9E",
+//    flying: ,
+//    grass: "#7CB342",
+//    psychic:
+//    ghost:
+//    bug:
+//    poison: 
+//    ground:
+//    dragon:
+//    steel:
+//    fighting:
+//    default:
+
+// }
 
 //mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
