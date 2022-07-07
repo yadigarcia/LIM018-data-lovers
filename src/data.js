@@ -29,19 +29,8 @@ export const ordenarDescendente = (data) => {
  return data.sort(sortDesPokemon);
 };
 
+3
 
-
-//export const filterPokemon = poke => poke.name === searchPokemon.value.toLowerCase() || poke.num ===searchPokemon.value.toLowerCase();
-
-
-
-
-// export function search(data, enter) {   
-//    return data.filter(function(poke){
-      
-//    })
- 
-// }
 
 export const search = (data, enter) => {
    function igual(x){
