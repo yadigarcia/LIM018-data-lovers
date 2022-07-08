@@ -31,10 +31,10 @@ describe('search', () => {
    });
 
    it('buscar coincidencia por nombre o numero', () => {
-    let nom = [{name: "ana"},{name: "yadira"}, {name: "leyla"}, {name: "olga"}];
+    let nom = [{"name": "ana"},{"name": "yadira"}, {"name": "leyla"}, {"name": "olga"}];
     let buscarnom = [{"name": "olga"}];
 
-     expect(search(buscarnom)).toContain(nom);
+     expect(search(nom, "olga")).toEqual(buscarnom);
     
    });
  });

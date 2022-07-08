@@ -10,26 +10,26 @@ let ordenAscend = document.getElementById("ordenAscend");
 let ordenDescen = document.getElementById("ordenDescen");
 let searchPokemon = document.getElementById("searchPokemon");
 let btnSearch = document.getElementById("btnSearch");
-// const typecolors = {
-//    electric: "#F1C40F",
-//    normal:
-//    fire: "#D32F2F",
-//    water: "#039BE5",
-//    ice:
-//    rock: "#9E9E9E",
-//    flying: ,
-//    grass: "#7CB342",
-//    psychic:
-//    ghost:
-//    bug:
-//    poison: 
-//    ground:
-//    dragon:
-//    steel:
-//    fighting:
-//    default:
+ const typecolors = {
+    electric: "#ffa300",
+    normal: "#4b1c71",
+    fire: "#ff0534",
+    water: "#039BE5",
+    ice: "#BBDEFB",
+    rock: "#9E9E9E",
+    flying: "#a2c0da",
+    grass: "#7CB342",
+    psychic: "#f8de7e",
+    ghost: "#d0ccd1",
+    bug: "#9E9D24",
+    poison: "#6f3460",
+    ground: "#73400d",
+    dragon: "#EF6C00",
+    steel: "#4e5452",
+    fighting: "#62152d",
+    default: "0a0a0a",
 
-// }
+ }
 
 //mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
