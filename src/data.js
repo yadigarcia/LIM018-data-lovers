@@ -1,4 +1,4 @@
-// estas funciones son de ejemplo
+// ordenar pokemon
 
 export const ordenarAscendente = (data) => {
 
@@ -29,8 +29,8 @@ export const ordenarDescendente = (data) => {
  return data.sort(sortDesPokemon);
 };
 
-3
 
+// buscar pokemon
 
 export const search = (data, enter) => {
    function igual(x){
@@ -42,3 +42,12 @@ export const search = (data, enter) => {
   return data.filter(igual);
  
 }
+
+// // filtar pokemon
+// export const runElectric = (data) => {
+//    function electric(x) {
+//     return data == x.type
+//    } 
+
+//   data.pokemon.filter(electric);
+//    }

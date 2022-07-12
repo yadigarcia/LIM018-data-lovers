@@ -7,9 +7,9 @@ describe("ordenarAscendente", () => {
   });
 
   it("ordenar ascendentmente", () => {
-    let arr = [{name: "l"},{name: "a"}, {name: "o"}, {name: "b"}];
-    let arrOr=[{name: "a"},{name: "b"}, {name: "l"}, {name: "o"}];
-    expect(ordenarAscendente(arr)).toEqual(arrOr);
+    let arrascen = [{name: "l"},{name: "a"}, {name: "o"}, {name: "b"}];
+    let arrOrascen=[{name: "a"},{name: "b"}, {name: "l"}, {name: "o"}];
+    expect(ordenarAscendente(arrascen)).toEqual(arrOrascen);
   });
 });
 
@@ -30,11 +30,12 @@ describe('search', () => {
      expect(typeof search).toBe('function');
    });
 
-   it('buscar coincidencia por nombre o numero', () => {
-    let nom = [{name: "ana"},{name: "yadira"}, {name: "leyla"}, {name: "olga"}];
-    let buscarnom = [{"name": "olga"}];
+   it('buscador por nombre', () => {
+    let arraynom = [{name: "ana"},{name: "yadira"}, {name: "leyla"}, {name: "olga"}];
+    //let buscarnom = [{"name": "olga"}];
+    let buscarnom = "olga";
 
-     expect(search(buscarnom)).toContain(nom);
+     expect(search(arraynom,buscarnom)).toContain("olga");
     
    });
  });
