@@ -1,7 +1,9 @@
 
 body {
-    background-color: rgba(0, 0, 0, 0.993);
-}
+    background-color:black; 
+    margin: 0;
+    padding: 0;
+   }
 
 
 .menu {
@@ -12,8 +14,9 @@ body {
     margin: auto;
     padding: 8px;
     justify-content: center; 
+   
 }
-/* barra inicio */
+/* barra inicio, pokedex,jugar,acerca de */
 .menu button{
     color: rgb(231, 229, 231);
     padding: 10px;
@@ -42,7 +45,6 @@ body {
     font-family: 'Luckiest Guy', cursive;
 }
 
-/*buscador */
 
 .pokedex_header {
     padding: 5px;
@@ -59,6 +61,7 @@ form{
 img{
     max-width: 100%;
 }
+
 /* buscador */
 .pokedex_header form input{
     border: none;
@@ -68,6 +71,7 @@ img{
     width: 500px;
     height: 1.5rem;
 }
+
 /* bnt pokebola */
 .pokedex_header form button{
     width: 40px;
@@ -76,8 +80,9 @@ img{
     border: none;
     background: transparent;
     cursor: pointer;
-   
 }
+
+/* opciones filtrado*/
 
 .navoption {
     color: rgb(207, 108, 9);
@@ -88,16 +93,18 @@ img{
     cursor: pointer;
     justify-content: space-around;
 }
+
+/*pokemones*/
 .containerPokemon {
     color: white;
     display: flex;
     flex-wrap: wrap;
-    /*background-color: black; */
     align-items: center;
     justify-content: center;
     margin: 10px auto;
 }
 
+/*cartasdel pokemon*/
 .card-pokemon {
     border: 6px ridge #efb810;
     border-radius: 10px;
@@ -110,15 +117,19 @@ img{
     text-align: center;
     text-transform: uppercase;
     transition: all 400ms ease-in-out;
-    
+    position:relative;
+    z-index: 1;           
 }
+
 .card-pokemon:hover{
-    transform: scale(1.1);
+    transform: scale(1.1); 
     cursor: url(images/pokebola01.png) ;
 }
 .card-pokemon .img-content{
-    filter: drop-shadow(-2px 2px 20px rgba(0, 0, 0, 0.7));
-    
+    /* filter: drop-shadow(-2px 2px 20px rgba(0, 0, 0, 0.7)); */
+    filter:saturate(200%);
+    position: relative;
+    z-index: 2; 
 }
 .card-pokemon .numberPokemon{
     font-family: 'Pacifico', cursive;
@@ -128,7 +139,6 @@ img{
     font-family: 'Bungee', cursive;
     font-size: 18px;
     color: rgb(17, 17, 17);
-
 }
 
 .card-pokemon .typePokemon{
@@ -136,9 +146,49 @@ img{
     color:rgb(66, 62, 62);
     font-weight: bolder;
 }
+
 /* style filtar */
 li{
-   list-style: none; 
+    list-style: none; 
+}
+.submenu li{
+   
    margin: 0;
-   padding: 0;
-  }
+   padding-left: 20px;
+   padding-right: 30px;
+   background: #424442;
+   }
+
+   
+   /* submenu deplegable por tipo*/
+
+   .submenu{
+    position: relative;
+    width: 80%;
+    text-transform: uppercase;
+    font-size: 1em;
+    transition: all 0.3s;
+    overflow: visible;
+    height: 0;
+    z-index: 3;
+    margin-left: -200%; 
+    visibility: hidden;  
+   }
+
+.submenu li a {
+    padding: 7px;
+    text-decoration: none;
+    color:rgb(252, 205, 76);
+    display: block;
+   
+}
+.filtertype:hover{
+    visibility: visible;
+    opacity: 1;
+    background-color: #333332;
+
+}
+.show{
+    margin-left: -30%;
+    visibility: visible;
+}
