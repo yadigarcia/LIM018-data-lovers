@@ -124,6 +124,7 @@ img{
 .card-pokemon:hover{
     transform: scale(1.1); 
     cursor: url(images/pokebola01.png) ;
+    filter: drop-shadow(-2px 2px 20px rgba(243, 240, 91, 0.7));
 }
 .card-pokemon .img-content{
     /* filter: drop-shadow(-2px 2px 20px rgba(0, 0, 0, 0.7)); */
