@@ -30,14 +30,14 @@ describe('search', () => {
      expect(typeof search).toBe('function');
    });
 
-   it('buscador por nombre', () => {
-    let arraynom = [{name: "ana"},{name: "yadira"}, {name: "leyla"}, {name: "olga"}];
-    //let buscarnom = [{"name": "olga"}];
-    let buscarnom = "olga";
 
-     expect(search(arraynom,buscarnom)).toContain("olga");
-    
-   });
+   it('buscar coincidencia por nombre o numero', () => {
+    let nom = [{"name": "ana"},{"name": "yadira"}, {"name": "leyla"}, {"name": "olga"}];
+    let buscarnom = [{"name": "olga"}];
+
+     expect(search(nom, "olga")).toEqual(buscarnom);
+
+  
  });
 
 
@@ -49,4 +49,4 @@ describe('search', () => {
 //   it('returns `anotherExample`', () => {
 //     expect(anotherExample()).toBe('OMG');
 //   });
-// });
+ });

@@ -2,8 +2,8 @@
 
 //import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import {ordenarDescendente,ordenarAscendente, search,filterPok} from "./data.js";
-import pokemon from './data/pokemon/pokemon.js';
+import {ordenarDescendente,ordenarAscendente, search} from "./data.js";
+//import pokemon from './data/pokemon/pokemon.js';
 
 let containerPokemon = document.getElementById("containerPokemon");
 let ordenAscend = document.getElementById("ordenAscend");
@@ -12,7 +12,28 @@ let searchPokemon = document.getElementById("searchPokemon");
 let btnSearch = document.getElementById("btnSearch");
 let filtrarPokemonesBtn = document.getElementById("filtrarPokemonesBtn");
 let submenu= document.getElementById("submenu");
-let filtertype = document.getElementById("filtertype");
+//let filtertype = document.getElementById("filtertype");
+
+//  const typecolors = {
+//     electric: "#ffa300",
+//     normal: "#4b1c71",
+//     fire: "#ff0534",
+//     water: "#039BE5",
+//     ice: "#BBDEFB",
+//     rock: "#9E9E9E",
+//     flying: "#a2c0da",
+//     grass: "#7CB342",
+//     psychic: "#f8de7e",
+//     ghost: "#d0ccd1",
+//     bug: "#9E9D24",
+//     poison: "#6f3460",
+//     ground: "#73400d",
+//     dragon: "#EF6C00",
+//     steel: "#4e5452",
+//     fighting: "#62152d",
+//     default: "0a0a0a",
+
+//  }
 
 //mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
@@ -120,25 +141,26 @@ btnSearch.addEventListener("click", e =>{
   
 });
 
- // aparezca el lstado por tipo
-
-
+//aparezca el lstado por tipo
 
 filtrarPokemonesBtn.addEventListener("click", function(){
- submenu.classList.toggle("show");
+  submenu.classList.toggle("show");
 });
 
 // filtar pokemones
-
-
-
 
 filtertype.addEventListener("click", e=>{
    e.preventDefault();
    // let showFilterPok = filterPok(data.pokemon, filtertype.value)
    return alert("hola");
 
-});
+// });
+submenu.addEventListener("click", e => {
+   e.preventDefault();
+
+   //let searchFilter=e.filtertype.value;
+
+  alert("hola");
+
+})
     
-
-
