@@ -2,8 +2,8 @@
 
 //import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import {ordenarDescendente,ordenarAscendente, search,filterPok} from "./data.js";
-import pokemon from './data/pokemon/pokemon.js';
+import {ordenarDescendente,ordenarAscendente, search} from "./data.js";
+//import pokemon from './data/pokemon/pokemon.js';
 
 let containerPokemon = document.getElementById("containerPokemon");
 let ordenAscend = document.getElementById("ordenAscend");
@@ -12,7 +12,7 @@ let searchPokemon = document.getElementById("searchPokemon");
 let btnSearch = document.getElementById("btnSearch");
 let filtrarPokemonesBtn = document.getElementById("filtrarPokemonesBtn");
 let submenu= document.getElementById("submenu");
-let filtertype = document.getElementById("filtertype");
+//let filtertype = document.getElementById("filtertype");
 
 //  const typecolors = {
 //     electric: "#ffa300",
@@ -160,9 +160,9 @@ filtrarPokemonesBtn.addEventListener("click", function(){
 submenu.addEventListener("click", e => {
    e.preventDefault();
 
-   let searchFilter=e.filtertype.value;
+   //let searchFilter=e.filtertype.value;
 
-  console.log(searchFilter);
+  alert("hola");
 
 })
     
