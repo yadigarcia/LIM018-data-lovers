@@ -43,11 +43,15 @@ export const search = (data, enter) => {
  
 }
 
-// // filtar pokemon
-// export const runElectric = (data) => {
-//    function electric(x) {
-//     return data == x.type
-//    } 
 
-//   data.pokemon.filter(electric);
-//    }
+export const filterPok = (data,types) =>{
+   let addfilter = [];
+   for (let i = 0; i < data.length; i++) {
+      for (let j = 0; j < data[i].type.length; j++) {
+         if (data[i].type[j] == types) {
+            addfilter.push(data[i]);            
+         }
+      }     
+   }
+}
+

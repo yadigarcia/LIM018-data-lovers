@@ -2,8 +2,7 @@
 
 //import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import {ordenarAscendente, search} from "./data.js";
-import {ordenarDescendente} from "./data.js";
+import {ordenarDescendente,ordenarAscendente, search,filterPok} from "./data.js";
 import pokemon from './data/pokemon/pokemon.js';
 
 let containerPokemon = document.getElementById("containerPokemon");
@@ -11,6 +10,8 @@ let ordenAscend = document.getElementById("ordenAscend");
 let ordenDescen = document.getElementById("ordenDescen");
 let searchPokemon = document.getElementById("searchPokemon");
 let btnSearch = document.getElementById("btnSearch");
+let filtrarPokemonesBtn = document.getElementById("filtrarPokemonesBtn");
+let submenu= document.getElementById("submenu");
 
 //mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
@@ -57,7 +58,6 @@ function createPokeCard (pokemon){
    containerPokemon.appendChild(card);
 }
  
-
    // const typecolors = {
    //    electric: "#F1C40F",
    //    normal:"·B09398",
@@ -79,12 +79,9 @@ function createPokeCard (pokemon){
    // }
    
 
-
-
 //Ordenar pokemon
 ordenAscend.addEventListener("click", e =>{
    e.preventDefault();
-   
   
    let ord = ordenarAscendente(data.pokemon); 
 
@@ -99,8 +96,6 @@ ordenAscend.addEventListener("click", e =>{
 ordenDescen.addEventListener("click", e =>{
    e.preventDefault();
 
-   
-
    let ordDes = ordenarDescendente(data.pokemon);
    containerPokemon.innerHTML = '';
 
@@ -109,6 +104,7 @@ ordenDescen.addEventListener("click", e =>{
    } 
 
 })
+
 
 //Buscar pokemon
 btnSearch.addEventListener("click", e =>{
@@ -119,26 +115,26 @@ btnSearch.addEventListener("click", e =>{
      
     for(let i=0; i< pok.length; i++ ){
        createPokeCard(pok[i]);
-   } 
+    } 
+  
 });
 
+ // aparezca el lstado por tipo
 
-//  filtar por tipo
-
-let filtrarPokemonesBtn = document.getElementById("filtrarPokemonesBtn");
-let submenu= document.getElementById("submenu");
-let electrico= document.getElementById("electrico");
+let pokeElectric= document.getElementById("electrico");
 
 filtrarPokemonesBtn.addEventListener("click", function(){
  submenu.classList.toggle("show");
 });
 
-// import {filterElectric} from "./data.js";
+// filtar pokemones
 
-// electrico.addEventListener("click", function(){
-//    let filterElectric= filterElectric(data.pokemon);
-     
-//    for(let j=0; j< filterElectric.length; j++ ){
-//        createPokeCard(filterElectric[j]);
-//    } 
-// });
+pokeElectric.addEventListener("click", e=>{
+   e.preventDefault();
+   
+
+
+});
+    
+
+
