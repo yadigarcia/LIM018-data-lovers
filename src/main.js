@@ -92,8 +92,6 @@ btnSearch.addEventListener("click", e =>{
 });
 
 
-// filtar pokemones
-
 
 
 
