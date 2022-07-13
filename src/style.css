@@ -174,13 +174,15 @@ li{
     z-index: 3;
     margin-left: -200%; 
     visibility: hidden;  
+    margin-top: 10px;
    }
 
 .submenu li a {
-    padding: 7px;
+    padding: 10px;
     text-decoration: none;
     color:rgb(252, 205, 76);
     display: block;
+    font-family: 'Righteous', cursive;
    
 }
 #filtertype:hover{
