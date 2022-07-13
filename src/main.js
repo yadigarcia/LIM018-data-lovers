@@ -12,6 +12,7 @@ let searchPokemon = document.getElementById("searchPokemon");
 let btnSearch = document.getElementById("btnSearch");
 let filtrarPokemonesBtn = document.getElementById("filtrarPokemonesBtn");
 let submenu= document.getElementById("submenu");
+let filtertype = document.getElementById("filtertype");
 
 //mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
@@ -121,7 +122,7 @@ btnSearch.addEventListener("click", e =>{
 
  // aparezca el lstado por tipo
 
-let pokeElectric= document.getElementById("electrico");
+
 
 filtrarPokemonesBtn.addEventListener("click", function(){
  submenu.classList.toggle("show");
@@ -129,10 +130,12 @@ filtrarPokemonesBtn.addEventListener("click", function(){
 
 // filtar pokemones
 
+let pokeElectric= document.getElementById("electrico");
+
 pokeElectric.addEventListener("click", e=>{
    e.preventDefault();
+   let showFilterPok = filterPok(data.pokemon, filtertype.value)
    
-
 
 });
     
