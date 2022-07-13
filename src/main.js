@@ -130,12 +130,13 @@ filtrarPokemonesBtn.addEventListener("click", function(){
 
 // filtar pokemones
 
-let pokeElectric= document.getElementById("electrico");
 
-pokeElectric.addEventListener("click", e=>{
+
+
+filtertype.addEventListener("click", e=>{
    e.preventDefault();
-   let showFilterPok = filterPok(data.pokemon, filtertype.value)
-   
+   // let showFilterPok = filterPok(data.pokemon, filtertype.value)
+   return alert("hola");
 
 });
     
