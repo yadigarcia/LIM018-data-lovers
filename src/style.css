@@ -183,7 +183,7 @@ li{
     display: block;
    
 }
-.filtertype:hover{
+#filtertype:hover{
     visibility: visible;
     opacity: 1;
     background-color: #333332;
