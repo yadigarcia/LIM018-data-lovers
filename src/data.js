@@ -1,4 +1,4 @@
-// estas funciones son de ejemplo
+// ordenar pokemon
 
 export const ordenarAscendente = (data) => {
 
@@ -29,8 +29,8 @@ export const ordenarDescendente = (data) => {
  return data.sort(sortDesPokemon);
 };
 
-3
 
+// buscar pokemon
 
 export const search = (data, enter) => {
    function igual(x){
@@ -42,3 +42,16 @@ export const search = (data, enter) => {
   return data.filter(igual);
  
 }
+
+
+export const filterPok = (data,types) =>{
+   let addfilter = [];
+   for (let i = 0; i < data.length; i++) {
+      for (let j = 0; j < data[i].type.length; j++) {
+         if (data[i].type[j] == types) {
+            addfilter.push(data[i]);            
+         }
+      }     
+   }
+}
+
