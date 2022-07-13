@@ -89,9 +89,12 @@ btnSearch.addEventListener("click", e =>{
        createPokeCard(pok[i]);
     } 
   
-   
-
 });
+
+
+// filtar pokemones
+
+
 
 
    
