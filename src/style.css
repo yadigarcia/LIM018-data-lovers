@@ -152,7 +152,7 @@ img{
 li{
     list-style: none; 
 }
-.submenu li{
+.submenu option{
    
    margin: 0;
    padding-left: 20px;
@@ -177,18 +177,20 @@ li{
     margin-top: 10px;
    }
 
-.submenu li a {
+.submenu option {
     padding: 10px;
-    text-decoration: none;
     color:rgb(252, 205, 76);
     display: block;
     font-family: 'Righteous', cursive;
    
 }
-#filtertype:hover{
+.submenu .filtertype:hover{
     visibility: visible;
     opacity: 1;
     background-color: #333332;
+    width: 100%;
+
+    
 
 }
 .show{

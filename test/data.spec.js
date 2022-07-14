@@ -1,4 +1,4 @@
-import { ordenarAscendente, ordenarDescendente, search } from '../src/data.js';
+import { ordenarAscendente, ordenarDescendente, search, filterPok } from '../src/data.js';
 
 
 describe("ordenarAscendente", () => {
@@ -40,13 +40,52 @@ describe('search', () => {
   
  });
 
-
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
-
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
  });
+
+ describe('filterPok', () => {
+  it('is a function', () => {
+    expect(typeof filterPok).toBe('function');
+  });
+
+
+  it('buscar coincidencia por nombre o numero', () => {
+   let pokemonTest = [{"name": "bulbasaur",
+    "generation": {
+      "num": "generation i",
+      "name": "kanto"
+    },
+    "pokemon-rarity": "normal",
+    "type": [
+      "grass",
+      "poison"
+      ]},
+      {
+        "num": "099",
+        "name": "kingler",
+        "generation": {
+          "num": "generation i",
+          "name": "kanto"
+        
+        },
+        "pokemon-rarity": "normal",
+        "type": [
+          "water"
+        ]}]
+    
+   let pokemonTest2 = [{"name": "bulbasaur",
+   "generation": {
+     "num": "generation i",
+     "name": "kanto"
+   },
+   "pokemon-rarity": "normal",
+   "type": [
+     "grass",
+     "poison"
+     ]}];
+
+    expect(filterPok(pokemonTest, "poison")).toEqual(pokemonTest2);
+
+ 
+});
+
+});

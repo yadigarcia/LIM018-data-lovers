@@ -2,7 +2,7 @@
 
 //import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import {ordenarDescendente,ordenarAscendente, search} from "./data.js";
+import {ordenarDescendente,ordenarAscendente, search, filterPok} from "./data.js";
 //import pokemon from './data/pokemon/pokemon.js';
 
 let containerPokemon = document.getElementById("containerPokemon");
@@ -12,7 +12,8 @@ let searchPokemon = document.getElementById("searchPokemon");
 let btnSearch = document.getElementById("btnSearch");
 let filtrarPokemonesBtn = document.getElementById("filtrarPokemonesBtn");
 let submenu= document.getElementById("submenu");
-//let filtertype = document.getElementById("filtertype");
+//let filtertype = document.querySelectorAll(".filtertype");
+
 
 //  const typecolors = {
 //     electric: "#ffa300",
@@ -133,7 +134,7 @@ btnSearch.addEventListener("click", e =>{
    e.preventDefault();
    containerPokemon.innerHTML = '';
 
-   let pok= search(data.pokemon, searchPokemon.value);
+   let pok= search(data.pokemon, searchPokemon.value.toLowerCase());
      
     for(let i=0; i< pok.length; i++ ){
        createPokeCard(pok[i]);
@@ -157,14 +158,20 @@ filtrarPokemonesBtn.addEventListener("click", function(){
    
 
 // });
-submenu.addEventListener("click", e => {
+submenu.addEventListener("change", e => {
    e.preventDefault();
+   containerPokemon.innerHTML = '';
+  let pokemonValue=e.target.value;
 
-   //let searchFilter=e.filtertype.value;
 
-  alert("hola");
+  //let showFilterPok = data.pokemon.filter(pokem => pokem.type == pokemonValue);
+  let showFilterPok= filterPok(data.pokemon, pokemonValue);
+     for(let i=0; i< showFilterPok.length; i++ ){
+         createPokeCard(showFilterPok[i]);
+        }
 
-})
+
+});
     
 
 
