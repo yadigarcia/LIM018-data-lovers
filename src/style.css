@@ -50,9 +50,9 @@ body {
     padding: 5px;
     margin: 0.5 em;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content:center;
 }
 
 form{
@@ -70,18 +70,31 @@ img{
     margin: 5px 5px;
     width: 500px;
     height: 1.5rem;
+    margin-top: 18px;
 }
 
 /* bnt pokebola */
 .pokedex_header form button{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     outline: none;
     border: none;
     background: transparent;
     cursor: pointer;
 }
+.btnRefresh{
+    width: 90px;
+    height: 90px;
+    background: transparent;
+    border-radius:50%;
+    margin-left: 50px;
+    cursor: pointer;
+    color: #52fd00;
+    font-family: 'Righteous', cursive;
+    font-size: 1.2em;
+   
 
+}
 /* opciones filtrado*/
 
 .navoption {
@@ -163,7 +176,7 @@ li{
    
    /* submenu deplegable por tipo*/
 
-   .submenu{
+.submenu{
     position: relative;
     width: 80%;
     text-transform: uppercase;

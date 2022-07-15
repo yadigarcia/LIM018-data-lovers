@@ -12,7 +12,7 @@ let searchPokemon = document.getElementById("searchPokemon");
 let btnSearch = document.getElementById("btnSearch");
 let filtrarPokemonesBtn = document.getElementById("filtrarPokemonesBtn");
 let submenu= document.getElementById("submenu");
-//let filtertype = document.querySelectorAll(".filtertype");
+let btnRefresh = document.getElementById("btnRefresh");
 
 
 //  const typecolors = {
@@ -170,6 +170,18 @@ submenu.addEventListener("change", e => {
          createPokeCard(showFilterPok[i]);
         }
 
+
+});
+
+btnRefresh.addEventListener("click", e=>{
+   e.preventDefault(),
+
+   containerPokemon.innerHTML="";
+
+   for(let i=0; i< data.pokemon.length; i++ ){
+      createPokeCard(data.pokemon[i]);
+   }
+   
 
 });
     
