@@ -13,6 +13,9 @@ let btnSearch = document.getElementById("btnSearch");
 let filtrarPokemonesBtn = document.getElementById("filtrarPokemonesBtn");
 let submenu= document.getElementById("submenu");
 let btnRefresh = document.getElementById("btnRefresh");
+let inicioPantalla = document.getElementById("inicioPantalla");
+let pantallaPokedex = document.getElementById("pantallaPokedex");
+let pokedex = document.getElementById("pokedex");
 
 
 //  const typecolors = {
@@ -35,6 +38,13 @@ let btnRefresh = document.getElementById("btnRefresh");
 //     default: "0a0a0a",
 
 //  }
+
+pokedex.addEventListener("click", e => {
+   e.preventDefault
+   inicioPantalla.style.display = "none";
+   pantallaPokedex.style.display = "block";
+ 
+});
 
 //mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
