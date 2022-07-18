@@ -2,7 +2,7 @@
 
 //import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import {ordenarDescendente,ordenarAscendente, search} from "./data.js";
+import {ordenarDescendente,ordenarAscendente, search, filterPok} from "./data.js";
 //import pokemon from './data/pokemon/pokemon.js';
 
 let containerPokemon = document.getElementById("containerPokemon");
@@ -12,7 +12,11 @@ let searchPokemon = document.getElementById("searchPokemon");
 let btnSearch = document.getElementById("btnSearch");
 let filtrarPokemonesBtn = document.getElementById("filtrarPokemonesBtn");
 let submenu= document.getElementById("submenu");
-//let filtertype = document.getElementById("filtertype");
+let btnRefresh = document.getElementById("btnRefresh");
+let inicioPantalla = document.getElementById("inicioPantalla");
+let pantallaPokedex = document.getElementById("pantallaPokedex");
+let pokedex = document.getElementById("pokedex");
+
 
 //  const typecolors = {
 //     electric: "#ffa300",
@@ -34,6 +38,13 @@ let submenu= document.getElementById("submenu");
 //     default: "0a0a0a",
 
 //  }
+
+pokedex.addEventListener("click", e => {
+   e.preventDefault
+   inicioPantalla.style.display = "none";
+   pantallaPokedex.style.display = "block";
+ 
+});
 
 //mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
@@ -133,7 +144,7 @@ btnSearch.addEventListener("click", e =>{
    e.preventDefault();
    containerPokemon.innerHTML = '';
 
-   let pok= search(data.pokemon, searchPokemon.value);
+   let pok= search(data.pokemon, searchPokemon.value.toLowerCase());
      
     for(let i=0; i< pok.length; i++ ){
        createPokeCard(pok[i]);
@@ -157,14 +168,32 @@ filtrarPokemonesBtn.addEventListener("click", function(){
    
 
 // });
-submenu.addEventListener("click", e => {
+submenu.addEventListener("change", e => {
    e.preventDefault();
+   containerPokemon.innerHTML = '';
+  let pokemonValue=e.target.value;
 
-   //let searchFilter=e.filtertype.value;
 
-  alert("hola");
+  //let showFilterPok = data.pokemon.filter(pokem => pokem.type == pokemonValue);
+  let showFilterPok= filterPok(data.pokemon, pokemonValue);
+     for(let i=0; i< showFilterPok.length; i++ ){
+         createPokeCard(showFilterPok[i]);
+        }
 
-})
+
+});
+
+btnRefresh.addEventListener("click", e=>{
+   e.preventDefault(),
+
+   containerPokemon.innerHTML="";
+
+   for(let i=0; i< data.pokemon.length; i++ ){
+      createPokeCard(data.pokemon[i]);
+   }
+   
+
+});
     
 
 
