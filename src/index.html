@@ -12,57 +12,72 @@
       <nav class="navmenu">
         <ul id="menu" class="menu">
           <button id="inicio" class="inicio"> Inicio </button>
-          <button id="Pokedex" class="iniciopokedex"> Pokedex </button>
+          <button id="pokedex" class="iniciopokedex"> Pokedex </button>
           <button  class="inicioJugar"> Jugar </button>
           <button  class="inicioAcercade"> Acerca de </button>
         </ul>
       </nav>
     </header>
+    <div id="inicioPantalla" class="inicioPantalla" style="display:block">
+      <video controls>
+        <source src="/video/pokemongo.mp4" type="video/mp4">
+      </video>
+      <section></section>
+
+    </div>
     
-    <div class="pokedex_header">
+    <div id="pantallaPokedex" class="pantallaPokedex" style="display:none">
+     <div id="pokedex_header" class="pokedex_header" >
 
       <form id="formSearchPokemon">
         <input type="text" id="searchPokemon">
         <button type="button" id="btnSearch" ><img src="/images/pokebola01.png"></button>
       </form>
-      
-    </div>
 
-    <nav class="navoption">
-      <div>
-        <ul>
-           <li id="filtrarPokemonesBtn"><i class="fa-solid fa-filter" > Filtrar <i class="fa-solid fa-angle-down"></i></i> </li>
-              <ul class="submenu" id="submenu">  
-                  <li class="filtertype" value="electric" ><a id="electric" href="" >electrico</a></li>
-                  <li class="filtertype" value="normal"><a href="" id="normal" >normal</a></li>
-                  <li class="filtertype" value="fire"><a href="" >fuego</a></li>
-                  <li class="filtertype" value="water"><a href="" >agua</a></li>
-                  <li class="filtertype" value="ice"><a href="" >hielo</a></li>
-                  <li class="filtertype" value="rock"><a href="" >roca</a></li>
-                  <li class="filtertype" value="flying"><a href="" >volador</a></li>
-                  <li class="filtertype" value="grass"><a href="" >planta</a></li>
-                  <li class="filtertype" value="psychic"><a href="" >psiquico</a></li>
-                  <li class="filtertype" value="ghost"><a href="" >fanstasma</a></li>
-                  <li class="filtertype" value="bug"><a href="" >bicho</a></li>
-                  <li class="filtertype" value="poison"><a href="" >veneno</a></li>
-                  <li class="filtertype" value="fairy"><a href="" >hada</a></li>
-                  <li class="filtertype" value="dragon"><a href="" >dragon</a></li>
-                  <li class="filtertype" value="steel"><a href="" >acero</a></li>
-                  <li class="filtertype" value="fighting"><a href="" >lucha</a></li>
-              </ul>
-         </ul>
-      </div>
-      <div>
-        <i class="fa-solid fa-arrow-up-a-z" id="ordenAscend"> Ordenar A-Z </i>
-      </div>
-      <div>
-        <i class="fa-solid fa-arrow-up-z-a" id="ordenDescen"> Ordenar Z-A</i>
-      </div>
-    </nav>
-    
-    <div id="containerPokemon" class="containerPokemon">
+      <section>
+        <button type="button" id="btnRefresh" class="btnRefresh"><img src="/images/vector.png"></button>
+      </section>
       
-    </div>
-    <script src="main.js" type="module"></script>
-  </body>
+      
+     </div>
+
+     <nav id="navoption"  class="navoption" >
+       <div>
+         <ul>
+            <li id="filtrarPokemonesBtn"><i class="fa-solid fa-filter" > Filtrar <i class="fa-solid fa-angle-down"></i></i> </li>
+               <select class="submenu" id="submenu">  
+                   <option class="filtertype" value="electric">electrico</option>
+                   <option class="filtertype" value="normal">normal</option>
+                   <option class="filtertype" value="water" >agua</option>
+                   <option class="filtertype" value="fire">fuego</option>
+                   <option class="filtertype" value="ice">hielo</option>
+                   <option class="filtertype" value="rock">roca</option>
+                   <option class="filtertype" value="flying">volador</option>
+                   <option class="filtertype" value="grass">planta</option>
+                   <option class="filtertype" value="psychic">psiquico</option>
+                   <option class="filtertype" value="ghost">fanstasma</option>
+                   <option class="filtertype" value="bug">bicho</option>
+                   <option class="filtertype" value="poison">veneno</option>
+                   <option class="filtertype" value="fairy">hada</option>
+                   <option class="filtertype" value="dragon">dragon</option>
+                   <option class="filtertype" value="steel">acero</option>
+                   <option class="filtertype" value="fighting">lucha</option> x
+               </select>
+          </ul>
+       </div>
+       <div>
+         <i class="fa-solid fa-arrow-up-a-z" id="ordenAscend"> Ordenar A-Z </i>
+       </div>
+       <div>
+         <i class="fa-solid fa-arrow-up-z-a" id="ordenDescen"> Ordenar Z-A</i>
+       </div>
+     </nav>
+    
+     <div id="containerPokemon" class="containerPokemon" >
+      
+     </div>
+
+   </div>
+   <script src="main.js" type="module"></script>
+   </body>
 </html>

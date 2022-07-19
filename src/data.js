@@ -43,6 +43,15 @@ export const search = (data, enter) => {
  
 }
 
+export const filterPok = (data,typePok) =>{ 
+   function filterPokType(y) {
+      
+      if(typePok == y.type[0] || typePok== y.type[1] || typePok== y.type[2])
+      return y; 
+   }
+   return data.filter(filterPokType);
+}
+
 
 export const filterPok = (data,typePok) =>{ 
    function filterPokType(y) {
