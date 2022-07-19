@@ -44,14 +44,13 @@ export const search = (data, enter) => {
 }
 
 
-// export const filterPok = (data,types) =>{
-//    let addfilter = [];
-//    for (let i = 0; i < data.length; i++) {
-//       for (let j = 0; j < data[i].type.length; j++) {
-//          if (data[i].type[j] == types) {
-//             addfilter.push(data[i]);           
-//          };
-//       }:     
-//    };
-// }
+export const filterPok = (data,typePok) =>{ 
+   function filterPokType(y) {
+      if(typePok == y.type)
+      return y; 
+   }
+   return data.filter(filterPokType);
+}
+
+
 
