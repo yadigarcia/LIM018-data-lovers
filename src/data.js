@@ -52,15 +52,13 @@ export const filterPok = (data,typePok) =>{
    return data.filter(filterPokType);
 }
 
-// estdistadistica de pokemones  
 
-// let sumPoke=0;
-// function sumar(data) {
-//   sumpoke +=filterPok
- 
+// estadisticas
+export const estadistic= (data, datos)=> {
+  let porcentaje = datos*100/data;
+ return porcentaje;
+}
 
-//    console.log(sumar);
-     
-// }
+
 
 
