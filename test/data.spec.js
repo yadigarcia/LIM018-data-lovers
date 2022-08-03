@@ -1,4 +1,4 @@
-import { ordenarAscendente, ordenarDescendente, search, filterPok } from '../src/data.js';
+import { ordenarAscendente, ordenarDescendente, search, filterPok, estadistic } from '../src/data.js';
 
 
 describe("ordenarAscendente", () => {
@@ -88,4 +88,15 @@ describe('search', () => {
  
 });
 
+});
+
+describe("estadistic", () => {
+  it('is a function', () => {
+    expect(typeof estadistic).toBe('function');
+  });
+
+  it("Sacar porcentaje", () => {
+    
+    expect(estadistic(200,100)).toEqual(50);
+  });
 });

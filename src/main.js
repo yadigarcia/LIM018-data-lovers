@@ -2,7 +2,7 @@
 
 //import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
-import {ordenarDescendente,ordenarAscendente, search, filterPok} from "./data.js";
+import {ordenarDescendente,ordenarAscendente, search, filterPok, estadistic} from "./data.js";
 //import pokemon from './data/pokemon/pokemon.js';
 
 let containerPokemon = document.getElementById("containerPokemon");
@@ -173,13 +173,14 @@ submenu.addEventListener("change", e => {
    containerPokemon.innerHTML = '';
   let pokemonValue=e.target.value;
 
-
   //let showFilterPok = data.pokemon.filter(pokem => pokem.type == pokemonValue);
   let showFilterPok= filterPok(data.pokemon, pokemonValue);
      for(let i=0; i< showFilterPok.length; i++ ){
          createPokeCard(showFilterPok[i]);
         }
-
+   
+   // alert(estadistic(data.pokemon.length, showFilterPok.length));
+    document.getElementById("messageEstadistic").textContent="Este tipo de pokemon tiene un porcentaje de " + estadistic(data.pokemon.length, showFilterPok.length).toFixed(2) +"%";
 
 });
 

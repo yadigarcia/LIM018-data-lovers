@@ -211,3 +211,21 @@ li{
     margin-left: -30%;
     visibility: visible;
 }
+#messageEstadistic{
+    font-family: 'Bungee', cursive;
+    font-size: 25px;
+    align-content: center;
+    color:  #efb810;
+    
+
+}
+#message{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    
+    margin-left: 20%;
+
+
+}
