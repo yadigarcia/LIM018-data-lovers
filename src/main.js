@@ -13,38 +13,52 @@ let btnSearch = document.getElementById("btnSearch");
 let filtrarPokemonesBtn = document.getElementById("filtrarPokemonesBtn");
 let submenu= document.getElementById("submenu");
 let btnRefresh = document.getElementById("btnRefresh");
+
+//visualizacion de pantallas div//
 let inicioPantalla = document.getElementById("inicioPantalla");
 let pantallaPokedex = document.getElementById("pantallaPokedex");
-let pokedex = document.getElementById("pokedex");
+let jugar =document.getElementById("jugar");
+let acercade = document.getElementById("acercade");
 
+//botones para cambiar ventanas del header//
+let btnInicio = document.getElementById("btnInicio");
+let btnPokedex = document.getElementById("btnPokedex");
+let btnInicioJugar = document.getElementById("btnInicioJugar");
+let btnAcercade = document.getElementById("btnAcercade");  
+      
 
-//  const typecolors = {
-//     electric: "#ffa300",
-//     normal: "#4b1c71",
-//     fire: "#ff0534",
-//     water: "#039BE5",
-//     ice: "#BBDEFB",
-//     rock: "#9E9E9E",
-//     flying: "#a2c0da",
-//     grass: "#7CB342",
-//     psychic: "#f8de7e",
-//     ghost: "#d0ccd1",
-//     bug: "#9E9D24",
-//     poison: "#6f3460",
-//     ground: "#73400d",
-//     dragon: "#EF6C00",
-//     steel: "#4e5452",
-//     fighting: "#62152d",
-//     default: "0a0a0a",
+btnInicio.addEventListener("click", e => {
+   e.preventDefault();
+   inicioPantalla.style.display = "block";
+   pantallaPokedex.style.display = "none";
+   jugar.style.display = "none";
+   acercade.display = "none";
+});
 
-//  }
-
-pokedex.addEventListener("click", e => {
-   e.preventDefault
+btnPokedex.addEventListener("click", e => {
+   e.preventDefault();
    inicioPantalla.style.display = "none";
    pantallaPokedex.style.display = "block";
- 
+   jugar.style.display = "none";
+   acercade.display = "none";
 });
+
+btnInicioJugar.addEventListener("click", e => {
+   e.preventDefault();
+   inicioPantalla.style.display = "none";
+   pantallaPokedex.style.display = "none";
+   jugar.style.display = "block";
+   acercade.display = "none";
+});
+
+btnAcercade.addEventListener("click", e => {
+   e.preventDefault();
+   inicioPantalla.style.display = "none";
+   pantallaPokedex.style.display = "none";
+   jugar.style.display = "none";
+   acercade.style.display = "block";
+});
+
 
 //mostrar pokemon
 for(let i=0; i< data.pokemon.length; i++ ){
@@ -77,12 +91,6 @@ function createPokeCard (pokemon){
    divType.textContent = pokemon.type;
 
 
-   // let divType = document.createElement("div");
-   // divType.classList.add("typePokemon");
-   // let TypeElem = pokemon.type.forEach(elemt=> elemt);     
-   // divType.innerHTML = TypeElem;
-
-
    card.appendChild(imgContent);
    card.appendChild(number);
    card.appendChild(name);
@@ -91,26 +99,6 @@ function createPokeCard (pokemon){
    containerPokemon.appendChild(card);
 }
  
-   // const typecolors = {
-   //    electric: "#F1C40F",
-   //    normal:"·B09398",
-   //    fire: "#D32F2F",
-   //    water: "#039BE5",
-   //    ice:"#AFEAFD",
-   //    rock: "#9E9E9E",
-   //    flying: "#7AE7C7",
-   //    grass: "#7CB342",
-   //    psychic:"#FFC6D9",
-   //    ghost:"#561D25",
-   //    bug:"#A2FAA3",
-   //    poison: "#795663",
-   //    ground:"#D2B074",
-   //    dragon:"#DA627D",
-   //    steel:"#1D8A99",
-   //    fighting:"#2F2F2F",
-   //    default:"#2A1A1F",
-   // }
-   
 
 //Ordenar pokemon
 ordenAscend.addEventListener("click", e =>{
@@ -152,22 +140,13 @@ btnSearch.addEventListener("click", e =>{
   
 });
 
-//aparezca el lstado por tipo
+//aparezca el listado por tipo
 
 filtrarPokemonesBtn.addEventListener("click", function(){
   submenu.classList.toggle("show");
 });
 
-// filtar pokemones
 
-// let pokeElectric= document.getElementById("electrico");
-
-// pokeElectric.addEventListener("click", e=>{
-//    e.preventDefault();
-//    let showFilterPok = filterPok(data.pokemon, filtertype.value)
-   
-
-// });
 submenu.addEventListener("change", e => {
    e.preventDefault();
    containerPokemon.innerHTML = '';

@@ -1,50 +1,62 @@
-
-body {
-    background-color:black; 
+*{
     margin: 0;
     padding: 0;
+}
+body {
+    background-color:black; 
    }
-
 
 .menu {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    align-items: center;
-    margin: auto;
+    width: 100vh;
     padding: 8px;
     justify-content: center; 
-   
 }
+
 /* barra inicio, pokedex,jugar,acerca de */
+.navmenu {
+    display: flex;
+    justify-content: center;
+}
+
 .menu button{
     color: rgb(231, 229, 231);
     padding: 10px;
-    font-size: 25px;
+    font-size: 22px;
     cursor: pointer;
     border: none;
     text-transform: uppercase;
-    width: 100%;  
+     width: 100%; 
+     position: center;
+     
 }
 
-.menu .inicio {
+.btnInicio {
     background-color: rgb(155, 241, 98);
     font-family: 'Luckiest Guy', cursive;
-
+ 
 }
-.menu .iniciopokedex {
+
+.btnPokedex {
     background-color: rgb(250, 7, 19);
     font-family: 'Luckiest Guy', cursive;
 }
-.menu .inicioJugar {
+
+.btnInicioJugar {
     background-color: rgb(129, 129, 241);
     font-family: 'Luckiest Guy', cursive;
 }
-.menu .inicioAcercade{
+
+.btnAcercade{
     background-color: orange;
     font-family: 'Luckiest Guy', cursive;
 }
 
+.videoInicio{
+    width: 100%;
+    margin-top: 10px;
+}
 
 .pokedex_header {
     padding: 5px;
@@ -75,16 +87,16 @@ img{
 
 /* bnt pokebola */
 .pokedex_header form button{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     outline: none;
     border: none;
     background: transparent;
     cursor: pointer;
 }
 .btnRefresh{
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     background: transparent;
     border-radius:50%;
     margin-left: 10px;
@@ -210,4 +222,96 @@ li{
 .show{
     margin-left: -30%;
     visibility: visible;
+}
+
+/* vistas de pantalla */
+
+.inicioPantalla{
+    display: block;
+}
+
+.pantallaPokedex{
+    display: none;
+}
+
+.jugar{
+    display: none;
+}
+
+.acercade{
+    display: none;
+}
+
+/* ventana JUGAR */
+.juegos{
+    height:60% ;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.p{
+    color:rgba(239, 243, 189, 0.986);
+    font-size: 40px;
+    text-align: center;
+    font-style: oblique;
+    margin-top: 30px;
+}
+
+.imgJugar {
+    width: 60%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-radius: 15px 15px;
+}
+
+.linkjugar{
+    text-decoration: none;
+    color: rgb(43, 247, 36);
+    font-size: 25px;
+    font-weight: 5px;
+    cursor: pointer;
+}
+
+/* ventana Acerca de  */
+
+.curiosidadesContainer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+h2{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    margin: 20px;
+    font-size: 35px;
+    font-style: oblique;
+    color: rgb(243, 165, 71);
+}
+
+.descripcion{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+p{
+    color: white;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display:flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top:15px 
+   
+   
+    
 }
