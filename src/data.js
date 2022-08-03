@@ -52,14 +52,15 @@ export const filterPok = (data,typePok) =>{
    return data.filter(filterPokType);
 }
 
+// estdistadistica de pokemones  
 
-export const filterPok = (data,typePok) =>{ 
-   function filterPokType(y) {
-      if(typePok == y.type)
-      return y; 
-   }
-   return data.filter(filterPokType);
-}
+// let sumPoke=0;
+// function sumar(data) {
+//   sumpoke +=filterPok
+ 
 
+//    console.log(sumar);
+     
+// }
 
 
