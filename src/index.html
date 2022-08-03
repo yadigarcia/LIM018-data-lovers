@@ -26,78 +26,83 @@
       </video>
     </div>
     
-    <div id="pantallaPokedex" class="pantallaPokedex" >
-        <div id="pokedex_header" class="pokedex_header" >
-          <form id="formSearchPokemon">
-           <input type="text" id="searchPokemon">
-           <button type="button" id="btnSearch" ><img src="/images/pokebola01.png"></button>
-          </form>
+    <div id="pokedexPantalla" class="pokedexPantalla" >
 
-          <section>
-           <button type="button" id="btnRefresh" class="btnRefresh"><img src="/images/vector.png"></button>
-          </section>  
-     </div>
+      <div id="pokedex_header" class="pokedex_header" >
+
+        <form id="formSearchPokemon">
+          <input type="text" id="searchPokemon">
+          <button type="button" id="btnSearch" ><img src="/images/pokebola01.png"></button>
+        </form>
+
+        <section>
+          <button type="button" id="btnRefresh" class="btnRefresh"><img src="/images/vector.png"></button>
+        </section>  
+      </div>
+    
+      <nav id="navoption"  class="navoption" >
+        <div>
+          <ul>
+              <li id="filtrarPokemonesBtn"><i class="fa-solid fa-filter" > Filtrar <i class="fa-solid fa-angle-down"></i></i> </li>
+                <select class="submenu" id="submenu">  
+                    <option class="filtertype" value="electric">electrico</option>
+                    <option class="filtertype" value="normal">normal</option>
+                    <option class="filtertype" value="water" >agua</option>
+                    <option class="filtertype" value="fire">fuego</option>
+                    <option class="filtertype" value="ice">hielo</option>
+                    <option class="filtertype" value="rock">roca</option>
+                    <option class="filtertype" value="flying">volador</option>
+                    <option class="filtertype" value="grass">planta</option>
+                    <option class="filtertype" value="psychic">psiquico</option>
+                    <option class="filtertype" value="ghost">fanstasma</option>
+                    <option class="filtertype" value="bug">bicho</option>
+                    <option class="filtertype" value="poison">veneno</option>
+                    <option class="filtertype" value="fairy">hada</option>
+                    <option class="filtertype" value="dragon">dragon</option>
+                    <option class="filtertype" value="steel">acero</option>
+                    <option class="filtertype" value="fighting">lucha</option> 
+                </select>
+            </ul>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-arrow-up-a-z" id="ordenAscend"> Ordenar A-Z </i>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-arrow-up-z-a" id="ordenDescen"> Ordenar Z-A</i>
+        </div>
+      </nav>
+
+      <div id="message"> 
+        <p id="messageEstadistic"> </p>
+      </div>
+
+     <div id="containerPokemon" class="containerPokemon" ></div>
+   
     </div>
 
-     <nav id="navoption"  class="navoption" >
-       <div>
-         <ul>
-            <li id="filtrarPokemonesBtn"><i class="fa-solid fa-filter" > Filtrar <i class="fa-solid fa-angle-down"></i></i> </li>
-               <select class="submenu" id="submenu">  
-                   <option class="filtertype" value="electric">electrico</option>
-                   <option class="filtertype" value="normal">normal</option>
-                   <option class="filtertype" value="water" >agua</option>
-                   <option class="filtertype" value="fire">fuego</option>
-                   <option class="filtertype" value="ice">hielo</option>
-                   <option class="filtertype" value="rock">roca</option>
-                   <option class="filtertype" value="flying">volador</option>
-                   <option class="filtertype" value="grass">planta</option>
-                   <option class="filtertype" value="psychic">psiquico</option>
-                   <option class="filtertype" value="ghost">fanstasma</option>
-                   <option class="filtertype" value="bug">bicho</option>
-                   <option class="filtertype" value="poison">veneno</option>
-                   <option class="filtertype" value="fairy">hada</option>
-                   <option class="filtertype" value="dragon">dragon</option>
-                   <option class="filtertype" value="steel">acero</option>
-                   <option class="filtertype" value="fighting">lucha</option> x
-               </select>
-          </ul>
-       </div>
-       <div>
-         <i class="fa-solid fa-arrow-up-a-z" id="ordenAscend"> Ordenar A-Z </i>
-       </div>
-       <div>
-         <i class="fa-solid fa-arrow-up-z-a" id="ordenDescen"> Ordenar Z-A</i>
-       </div>
-     </nav>
-     <div id="message"> 
-      <p id="messageEstadistic"> </p>
-     </div>
-
-    <div id="containerPokemon" class="containerPokemon" ></div>
-   
-
-    <div id="jugar" class="jugar" >
+    <div id="jugarPantalla" class="jugarPantalla" >
 
       <p class="p"> Empecemos la diversion...</p>
 
-      <div class="juegos">
+      <div class="jugar">
         <img class="imgJugar" src="https://lh3.googleusercontent.com/05JfZ1ZdyzrRNvhJosUFdcjjJRFE7k2KhmeM2ujqeCbrcrCb1hkq7O_JdUBpQ3r9hi0YeSn4WgmKx3Ai8LHdM2SucxSzl9TRZ4fCAqETJ6WtHgE" alt="pokemon-go" >
         <a class="linkjugar" href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo">Jugar Pokemon Go</a>
       </div>
     
-      <div class="juegos">
+      <div class="jugar">
         <img class="imgJugar" src="https://www.y9freegames.com/wp-content/uploads/thumbs/custom/P/Pokemon-Sienna.jpg" alt="pokemon-go">
       <a class="linkjugar" href="https://www.minijuegos.com/juego/pokemon-sienna">Jugar Pokemon Sienna</a>
       </div>
       
-      <div class="juegos">
+      <div class="jugar">
         <img class="imgJugar" src="https://areajugones.sport.es/wp-content/uploads/2021/03/resumen-anime-de-pokemon-1080x600.jpeg" alt="pokemosJuegos" >
       <a class="linkjugar" href="https://www.minijuegos.com/"> màs Juegos... </a> 
       </div>
     </div>
     
-    <div id="acercade" class="acercade">
+    <div id="acercadePantalla" class="acercadePantalla">
     
       <div class="curiosidadesContainer"> 
 

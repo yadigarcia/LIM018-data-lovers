@@ -27,9 +27,8 @@ body {
     cursor: pointer;
     border: none;
     text-transform: uppercase;
-     width: 100%; 
-     position: center;
-     
+    width: 100%; 
+    position: center;     
 }
 
 .btnInicio {
@@ -70,6 +69,7 @@ body {
 form{
     display: flex;
 }
+
 img{
     max-width: 100%;
 }
@@ -94,6 +94,7 @@ img{
     background: transparent;
     cursor: pointer;
 }
+
 .btnRefresh{
     width: 80px;
     height: 80px;
@@ -105,9 +106,8 @@ img{
     font-family: 'Righteous', cursive;
     font-size: 1.2em;
     padding-top: 10px;
-   
-
 }
+
 /* opciones filtrado*/
 
 .navoption {
@@ -120,7 +120,7 @@ img{
     justify-content: space-around;
 }
 
-/*pokemones*/
+/*Contenedor de Pokemones*/
 .containerPokemon {
     color: white;
     display: flex;
@@ -130,7 +130,7 @@ img{
     margin: 10px auto;
 }
 
-/*cartasdel pokemon*/
+/*cartas del pokemon*/
 .card-pokemon {
     border: 6px ridge #efb810;
     border-radius: 10px;
@@ -152,20 +152,23 @@ img{
     cursor: url(images/pokebola01.png) ;
     filter: drop-shadow(-2px 2px 20px rgba(243, 240, 91, 0.7));
 }
+
 .card-pokemon .img-content{
     /* filter: drop-shadow(-2px 2px 20px rgba(0, 0, 0, 0.7)); */
     filter:saturate(200%);
     position: relative;
     z-index: 2; 
 }
+
 .card-pokemon .numberPokemon{
-    font-family: 'Pacifico', cursive;
-    
+    font-family: 'Pacifico', cursive;   
 }
+
 .card-pokemon .namePokemon{
     font-family: 'Bungee', cursive;
     font-size: 18px;
     color: rgb(17, 17, 17);
+    position: relative;
 }
 
 .card-pokemon .typePokemon{
@@ -178,16 +181,20 @@ img{
 li{
     list-style: none; 
 }
+
 .submenu option{
-   
    margin: 0;
    padding-left: 20px;
    padding-right: 30px;
-   background: #424442;
-   }
+   background: #424442; 
+   padding: 10px;
+   color:rgb(252, 205, 76);
+   display: block;
+   font-family: 'Righteous', cursive;
+}
 
    
-   /* submenu deplegable por tipo*/
+/* submenu deplegable por tipo*/
 
 .submenu{
     position: relative;
@@ -195,32 +202,23 @@ li{
     text-transform: uppercase;
     font-size: 1em;
     transition: all 0.3s;
-    overflow: visible;
+    /* overflow: visible; */
     height: 0;
     z-index: 3;
     margin-left: -200%; 
-    visibility: hidden;  
+    /* visibility: hidden;   */
     margin-top: 10px;
-   }
-
-.submenu option {
-    padding: 10px;
-    color:rgb(252, 205, 76);
-    display: block;
-    font-family: 'Righteous', cursive;
-   
 }
+
 .submenu .filtertype:hover{
     visibility: visible;
     opacity: 1;
     background-color: #333332;
     width: 100%;
-
-    
-
 }
+
 .show{
-    margin-left: -30%;
+    margin-left: 0%;
     visibility: visible;
 }
 
@@ -228,19 +226,15 @@ li{
     font-family: 'Bungee', cursive;
     font-size: 25px;
     align-content: center;
-    color:  #efb810;
-    
-
+    color:  #efb810; 
 }
+
 #message{
     align-items: center;
     display: flex;
     flex-direction: row;
     height: 50%;
-    
     margin-left: 20%;
-
-
 }
 
 
@@ -250,20 +244,20 @@ li{
     display: block;
 }
 
-.pantallaPokedex{
+.pokedexPantalla{
     display: none;
 }
 
-.jugar{
+.jugarPantalla{
     display: none;
 }
 
-.acercade{
+.acercadePantalla{
     display: none;
 }
 
 /* ventana JUGAR */
-.juegos{
+.jugar{
     height:60% ;
     display: flex;
     flex-flow: column wrap;
@@ -301,12 +295,11 @@ li{
     display: flex;
     flex-direction: column;
     color: white;
+    margin-bottom: 20px;
 }
 
 h2{
     display: flex;
-    flex-direction: column;
-    color: white;
     justify-content: center;
     margin: 20px;
     font-size: 35px;
@@ -315,10 +308,21 @@ h2{
 }
 
 .descripcion{
-    margin: 20px;
+    margin: 30px;
     display: flex;
     flex-direction: column;
-    color: white;
+    /* color: white; */
+}
+
+.curiosidadesContainer p{
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display:flex;
+    flex-direction: column;
+    text-align: justify;
+    margin-left: 60px;
+    margin-right: 50px;
+    margin-top:15px 
 }
 
 

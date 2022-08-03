@@ -3,34 +3,31 @@
 export const ordenarAscendente = (data) => {
 
   function sortPokemon(x, y){
-    if(x.name < y.name){
-       return -1;
-    }
-    if(x.name > y.name){
-       return 1;
-    }
- }
+      if(x.name < y.name){
+         return -1;
+      }
+      if(x.name > y.name){
+         return 1;
+      }
+   }
   return data.sort(sortPokemon);
 };
 
-export const anotherExample = () => {
-  return 'OMG';
-};
 
 export const ordenarDescendente = (data) => {
   function sortDesPokemon(x,y){
-    if(x.name < y.name){
+     if(x.name < y.name){
        return 1;
-    }
-    if(x.name > y.name){
+      }
+     if(x.name > y.name){
        return -1;
-    }
- }
+      }
+   }
  return data.sort(sortDesPokemon);
 };
 
 
-// buscar pokemon
+// Buscar pokemon
 
 export const search = (data, enter) => {
    function igual(x){
@@ -42,6 +39,8 @@ export const search = (data, enter) => {
   return data.filter(igual);
  
 }
+
+// Filtar Pokemon por tipo
 
 export const filterPok = (data,typePok) =>{ 
    function filterPokType(y) {

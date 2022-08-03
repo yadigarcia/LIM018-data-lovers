@@ -1,5 +1,3 @@
-//import { example } from './data.js';
-
 //import pokemon from './data/pokemon/pokemon.js';
 import data from './data/pokemon/pokemon.js';
 import {ordenarDescendente,ordenarAscendente, search, filterPok, estadistic} from "./data.js";
@@ -16,9 +14,9 @@ let btnRefresh = document.getElementById("btnRefresh");
 
 //visualizacion de pantallas div//
 let inicioPantalla = document.getElementById("inicioPantalla");
-let pantallaPokedex = document.getElementById("pantallaPokedex");
-let jugar =document.getElementById("jugar");
-let acercade = document.getElementById("acercade");
+let pokedexPantalla = document.getElementById("pokedexPantalla");
+let jugarPantalla =document.getElementById("jugarPantalla");
+let acercadePantalla = document.getElementById("acercadePantalla");
 
 //botones para cambiar ventanas del header//
 let btnInicio = document.getElementById("btnInicio");
@@ -30,33 +28,33 @@ let btnAcercade = document.getElementById("btnAcercade");
 btnInicio.addEventListener("click", e => {
    e.preventDefault();
    inicioPantalla.style.display = "block";
-   pantallaPokedex.style.display = "none";
-   jugar.style.display = "none";
-   acercade.display = "none";
+   pokedexPantalla.style.display = "none";
+   jugarPantalla.style.display = "none";
+   acercadePantalla.style.display  = "none";
 });
 
 btnPokedex.addEventListener("click", e => {
    e.preventDefault();
    inicioPantalla.style.display = "none";
-   pantallaPokedex.style.display = "block";
-   jugar.style.display = "none";
-   acercade.display = "none";
+   pokedexPantalla.style.display = "block";
+   jugarPantalla.style.display = "none";
+   acercadePantalla.style.display  = "none";
 });
 
 btnInicioJugar.addEventListener("click", e => {
    e.preventDefault();
    inicioPantalla.style.display = "none";
-   pantallaPokedex.style.display = "none";
-   jugar.style.display = "block";
-   acercade.display = "none";
+   pokedexPantalla.style.display = "none";
+   jugarPantalla.style.display = "block";
+   acercadePantalla.style.display  = "none";
 });
 
 btnAcercade.addEventListener("click", e => {
    e.preventDefault();
    inicioPantalla.style.display = "none";
-   pantallaPokedex.style.display = "none";
-   jugar.style.display = "none";
-   acercade.style.display = "block";
+   pokedexPantalla.style.display = "none";
+   jugarPantalla.style.display = "none";
+   acercadePantalla.style.display = "block";
 });
 
 
@@ -104,12 +102,12 @@ function createPokeCard (pokemon){
 ordenAscend.addEventListener("click", e =>{
    e.preventDefault();
   
-   let ord = ordenarAscendente(data.pokemon); 
+   let ordAsc = ordenarAscendente(data.pokemon); 
 
    containerPokemon.innerHTML = '';
    
-   for(let i=0; i< ord.length; i++ ){
-      createPokeCard(ord[i]);
+   for(let i=0; i< ordAsc.length; i++ ){
+      createPokeCard(ordAsc[i]);
    } 
 
 })
@@ -146,20 +144,18 @@ filtrarPokemonesBtn.addEventListener("click", function(){
   submenu.classList.toggle("show");
 });
 
-
 submenu.addEventListener("change", e => {
    e.preventDefault();
    containerPokemon.innerHTML = '';
-  let pokemonValue=e.target.value;
+  let pokemonValue = e.target.value;
 
-  //let showFilterPok = data.pokemon.filter(pokem => pokem.type == pokemonValue);
-  let showFilterPok= filterPok(data.pokemon, pokemonValue);
+   let showFilterPok= filterPok(data.pokemon, pokemonValue);
      for(let i=0; i< showFilterPok.length; i++ ){
          createPokeCard(showFilterPok[i]);
-        }
+      }
    
    // alert(estadistic(data.pokemon.length, showFilterPok.length));
-    document.getElementById("messageEstadistic").textContent="Este tipo de pokemon tiene un porcentaje de " + estadistic(data.pokemon.length, showFilterPok.length).toFixed(2) +"%";
+   document.getElementById("messageEstadistic").textContent="Este tipo de pokemon tiene un porcentaje de " + estadistic(data.pokemon.length, showFilterPok.length).toFixed(2) +"%";
 
 });
 
@@ -171,9 +167,5 @@ btnRefresh.addEventListener("click", e=>{
    for(let i=0; i< data.pokemon.length; i++ ){
       createPokeCard(data.pokemon[i]);
    }
-   
-
 });
     
-
-

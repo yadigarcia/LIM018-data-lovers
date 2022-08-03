@@ -26,27 +26,24 @@ describe("ordenarDescendente", () => {
 });
 
 describe('search', () => {
-   it('is a function', () => {
+  it('is a function', () => {
      expect(typeof search).toBe('function');
    });
-
 
    it('buscar coincidencia por nombre o numero', () => {
     let nom = [{"name": "ana"},{"name": "yadira"}, {"name": "leyla"}, {"name": "olga"}];
     let buscarnom = [{"name": "olga"}];
 
      expect(search(nom, "olga")).toEqual(buscarnom);
+ 
+  });
 
-  
- });
+});
 
- });
-
- describe('filterPok', () => {
+describe('filterPok', () => {
   it('is a function', () => {
     expect(typeof filterPok).toBe('function');
   });
-
 
   it('buscar coincidencia por nombre o numero', () => {
    let pokemonTest = [{"name": "bulbasaur",
@@ -81,12 +78,10 @@ describe('search', () => {
    "type": [
      "grass",
      "poison"
-     ]}];
+    ]}];
 
     expect(filterPok(pokemonTest, "poison")).toEqual(pokemonTest2);
-
- 
-});
+  });
 
 });
 

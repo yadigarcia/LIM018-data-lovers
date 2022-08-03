@@ -4,6 +4,16 @@
 
 El proyecto es una pagina web que permite a los jugadores o aficionados de Pokemon acceder a una interfaz que les permite buscar información e interactuar mediante filtros sobre los tipos de pokemón.
 
+Yo como: Usuario aficcionado a Pokemon.
+Quiero: Visualizar los Pokemones y poder filtarlos por su tipo.
+Para: Identificar los tipos de pokemón y poder ser un buen maestro Pokemon.
+
+Yo como: Usuario aficcionado a Pokemon.
+Quiero:Poder ordenar alfabeticamente los pokemones.
+Para: visualizar los pokemones de forma ordenada.
+
+Con estas historias de usrio se llevo a cabo el diseño de la web, siguiendo los siguientes puntos:
+
 - [x] **Diseñar la aplicación pensando y entendiendo al usuario.**
 - [x] **Crear prototipos para obtener feedback.**
 - [x] **Planear y ejecutar tests de usabilidad.**
