@@ -52,8 +52,13 @@ export const filterPok = (data,typePok) =>{
    return data.filter(filterPokType);
 }
 
+
 // estadisticas
 export const estadistic= (data, datos)=> {
   let porcentaje = datos*100/data;
  return porcentaje;
 }
+
+
+
+
