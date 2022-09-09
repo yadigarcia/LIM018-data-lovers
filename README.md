@@ -123,3 +123,4 @@ https://www.figma.com/file/VKEyrHiH1RbaG4zjAHQlwc/POKEMON
 * [x] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [x] UI: Permite filtrar data en base a una condición.
 * [x] UI: Es _responsive_.
+**********
